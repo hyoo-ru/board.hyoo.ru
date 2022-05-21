@@ -5726,7 +5726,7 @@ var $;
             const obj = new this.$.$mol_link_iconed();
             obj.uri = () => this.widget_uri(id);
             obj.title = () => this.widget_title(id);
-            obj.target = () => "_self";
+            obj.target = () => "_top";
             return obj;
         }
         Widget_drag(id) {

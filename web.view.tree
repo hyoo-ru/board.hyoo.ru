@@ -296,4 +296,4 @@ $hyoo_board_group $mol_drop
 							Sub <= Widget_link* $mol_link_iconed
 								uri <= widget_uri* \
 								title <= widget_title* \
-								target \_self
+								target \_top
