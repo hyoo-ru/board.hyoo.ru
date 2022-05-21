@@ -1,4 +1,7 @@
 {
+	"$hyoo_board_group_Delete_title": "удалите группу",
+	"$hyoo_board_group_Title_hint": "Название группы",
+	"$hyoo_board_group_Widgets_empty_hint_title": "Киньте ссылку сюда или...",
 	"$mol_lights_toggle_hint": "Переключить освещение",
 	"$mol_link_source_hint": "Исходные коды"
 }
