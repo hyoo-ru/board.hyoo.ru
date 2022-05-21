@@ -1,0 +1,29 @@
+<!doctype html>
+<html mol_view_root>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+<link href="web.css" rel="stylesheet"/>
+<link href="mol/logo/logo.svg" rel="icon" />
+
+<body mol_view_root>
+	<div mol_view_root="$hyoo_board"></div>
+	<script src="web.js" charset="utf-8"></script>
+
+				<script src="/mol/build/client/client.js" charset="utf-8"></script>
+				<script>
+					addEventListener( 'load', ()=> {
+
+						const test = document.createElement( 'script' )
+						test.src = 'web.test.js'
+						
+						const audit =  document.createElement( 'script' )
+						audit.src = 'web.audit.js'
+						
+						test.onload = ()=> document.head.appendChild( audit )
+						document.head.appendChild( test )
+
+					} )
+				</script>
+				</body>
