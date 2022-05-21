@@ -1,0 +1,37 @@
+$hyoo_board_group $mol_drop
+	links? /
+	adopt? <=> link_adopt? null
+	receive? <=> link_receive*Infinity? null
+	Sub $mol_list
+		rows /
+			<= Head_drop $mol_drop
+				links? /
+				adopt? <=> link_adopt? null
+				receive? <=> link_outer_receive? null
+				Sub <= Head $mol_view
+					sub /
+						<= Title $mol_string
+							hint @ \Group title
+							value? <=> title? \
+			<= Widgets $mol_list
+				Empty <= Widgets_empty $mol_view
+					sub /
+						<= Widgets_empty_hint $mol_paragraph
+							title @ \Drop link here or...
+						<= Delete $mol_button_minor
+							click? <=> delete? null
+							title @ \Delete group
+				rows <= widgets /
+					<= Widget*id $mol_drop
+						adopt? <=> link_adopt? null
+						receive? <=> link_receive*? null
+						Sub <= Widget_drag* $mol_drag
+							end? <=> link_drag_end*? null
+							transfer *
+								text/plain <= widget_uri* \
+								text/html <= widget_html* \
+								text/uri-list <= widget_uri* \
+							Sub <= Widget_link* $mol_link_iconed
+								uri <= widget_uri* \
+								title <= widget_title* \
+								target \_self

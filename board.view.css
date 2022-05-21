@@ -1,0 +1,25 @@
+[hyoo_board_view] {
+	flex: 1 0 40rem;
+}
+
+[hyoo_board_groups] {
+	flex-grow: 1;
+	align-content: stretch;
+	align-items: stretch;
+	flex-wrap: wrap;
+	padding: .375rem;
+}
+
+[hyoo_board_group] {
+	flex-grow: 1;
+	padding: .375rem;
+}
+
+[hyoo_board_page_foot] {
+	align-self: flex-end;
+	background: none;
+}
+
+[hyoo_board][mol_drop_status="drag"] [hyoo_board_page_body] {
+	box-shadow: inset 0 0 0 1px var(--mol_theme_focus);
+}

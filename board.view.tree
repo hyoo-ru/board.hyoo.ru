@@ -1,0 +1,18 @@
+$hyoo_board $mol_drop
+	groups_all / \
+	Sub <= Page $mol_page
+		plugins /
+			<= Theme $mol_theme_auto
+		Head null
+		body /
+			<= Groups $mol_view
+				sub <= groups /
+					<= Group*id $hyoo_board_group
+						title? <=> group_title*? \
+						links? <=> group_links*? /
+						delete? <=> group_delete*? null
+						link_adopt? <=> link_adopt? null
+						link_outer_receive? <=> group_add*? null
+		foot /
+			<= Source $mol_link_source uri \https://github.com/hyoo-ru/board.hyoo.ru
+			<= Lights $mol_lights_toggle
