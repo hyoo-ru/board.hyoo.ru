@@ -30,7 +30,7 @@ namespace $.$$ {
 		
 		override group_title( group: string, next?: string ) {
 			return this.$.$mol_state_local.value( `group=${group}/title`, next )
-				?? ( group ? '' : 'Main Links' )
+				?? ( group ? '' : '' )
 		}
 		
 		override group_links( group: string, next?: $hyoo_board_link[] ) {
