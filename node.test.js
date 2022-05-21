@@ -5090,7 +5090,7 @@ var $;
             }
             group_title(group, next) {
                 return this.$.$mol_state_local.value(`group=${group}/title`, next)
-                    ?? (group ? '' : 'Main Links');
+                    ?? (group ? '' : '');
             }
             group_links(group, next) {
                 return this.$.$mol_state_local.value(`group=${group}/links`, next) ?? [];
