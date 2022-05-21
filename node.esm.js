@@ -5118,7 +5118,9 @@ var $;
                 const links = transfer.getData('text/uri-list').split(/\r?\n/g).filter(Boolean);
                 if (links.length)
                     return links.map(link => ({
-                        title: decodeURIComponent(link.replace(/^.*(?:\/\/|[?#])([^?#]+)$/, '$1')).split('\n')[0],
+                        title: decodeURIComponent(link.replace(/^.*(?:\/\/|[?#])([^?#]+)$/, '$1'))
+                            .split('\n')[0]
+                            .replace(/\/+$/, ''),
                         uri: link,
                     }));
                 return null;
