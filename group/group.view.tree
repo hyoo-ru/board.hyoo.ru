@@ -5,7 +5,6 @@ $hyoo_board_group $mol_drop
 	Sub $mol_list
 		rows /
 			<= Head_drop $mol_drop
-				links? /
 				adopt? <=> link_adopt? null
 				receive? <=> link_outer_receive? null
 				Sub <= Head $mol_view
