@@ -5049,6 +5049,7 @@ var $;
         }
         Page() {
             const obj = new this.$.$mol_page();
+            obj.title = () => "$hyoo_board";
             obj.plugins = () => [
                 this.Theme()
             ];
