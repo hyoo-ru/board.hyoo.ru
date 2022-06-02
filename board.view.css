@@ -2,6 +2,11 @@
 	flex: 1 0 40rem;
 }
 
+[hyoo_board_hint] {
+	color: var(--mol_theme_shade);
+	padding: var(--mol_gap_text);
+}
+
 [hyoo_board_groups] {
 	flex-grow: 1;
 	align-content: stretch;

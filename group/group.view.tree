@@ -2,35 +2,52 @@ $hyoo_board_group $mol_drop
 	links? /
 	adopt? <=> link_adopt? null
 	receive? <=> link_receive*Infinity? null
+	attr *
+		^
+		hyoo_board_group_edit <= edit? false
+	event *
+		^
+		pointermove?event <=> hover?event null
 	Sub $mol_list
 		rows /
 			<= Head_drop $mol_drop
 				adopt? <=> link_adopt? null
 				receive? <=> link_outer_receive? null
 				Sub <= Head $mol_view
-					sub /
+					sub <= head_content /
 						<= Title $mol_string
 							hint @ \Group title
 							value? <=> title? \
+						<= Delete $mol_button_minor
+							click? <=> delete? null
+							hint @ \Delete group
+							sub /
+								<= Delete_icon $mol_icon_cross
 			<= Widgets $mol_list
 				Empty <= Widgets_empty $mol_view
 					sub /
 						<= Widgets_empty_hint $mol_paragraph
-							title @ \Drop link here or...
-						<= Delete $mol_button_minor
-							click? <=> delete? null
-							title @ \Delete group
+							title @ \Drop link here
 				rows <= widgets /
 					<= Widget*id $mol_drop
 						adopt? <=> link_adopt? null
 						receive? <=> link_receive*? null
-						Sub <= Widget_drag* $mol_drag
-							end? <=> link_drag_end*? null
-							transfer *
-								text/plain <= widget_uri* \
-								text/html <= widget_html* \
-								text/uri-list <= widget_uri* \
-							Sub <= Widget_link* $mol_link_iconed
-								uri <= widget_uri* \
-								title <= widget_title* \
-								target \_top
+						Sub <= Bookmark* $mol_stack sub /
+							<= Bookmark_edit* $mol_string
+								value? <=> bookmark_text*? \
+								submit? <=> bookmark_edit_submit*? null
+							<= Widget_drag* $mol_drag
+								end? <=> widget_drag_end*? null
+								transfer *
+									text/plain <= bookmark_uri* \
+									text/html <= bookmark_html* \
+									text/uri-list <= bookmark_uri* \
+								Sub <= Bookmark_link* $mol_link_iconed
+									uri <= bookmark_uri* \
+									target \_top
+									content <= bookmark_content* /
+										<= Bookmark_title* $mol_view
+											sub / <= bookmark_title* \
+										<= Bookmark_image* $mol_image
+											title <= bookmark_text*
+											uri <= bookmark_image* \

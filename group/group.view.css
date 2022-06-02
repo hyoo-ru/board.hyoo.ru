@@ -1,9 +1,14 @@
 [hyoo_board_group] {
 	border-radius: var(--mol_gap_round);
+	max-width: 30rem;
 }
 
 [hyoo_board_group_head] {
 	border-radius: var(--mol_gap_round);
+}
+
+[hyoo_board_group_title]:not(:placeholder-shown) {
+	background: none;
 }
 
 [hyoo_board_group][mol_drop_status="drag"] [hyoo_board_group_widget]:last-child {
@@ -28,4 +33,34 @@
 }
 [hyoo_board_group_widgets_empty_hint] {
 	padding: var(--mol_gap_text);
+}
+
+[hyoo_board_group_bookmark_image] {
+	align-self: center;
+}
+
+[hyoo_board_group_bookmark_title] {
+	flex: 1 0 auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+	max-width: 100%;
+}
+
+[hyoo_board_group_bookmark_edit] {
+	margin-left: 1.25rem;
+	background: none;
+}
+
+[hyoo_board_group_edit="true"] [hyoo_board_group_bookmark_link] {
+	pointer-events: none;
+}
+
+[hyoo_board_group_bookmark_edit]:not(:focus) {
+	opacity: 0;
+}
+
+[hyoo_board_group_bookmark_edit]:focus + * {
+	opacity: 0;
 }

@@ -41,14 +41,16 @@ namespace $.$$ {
 			
 			const html = transfer.getData( 'text/html' )
 			if( html ) {
-				
 				const dom = $mol_dom_parse( html, 'text/html' )
 				const els = dom.getElementsByTagName( 'a' )
 				
-				const links: $hyoo_board_link[] = [ ... els ].map( el => ({
-					title: el.textContent!,
-					uri: el.getAttribute( 'href' )!,
-				}) )
+				const links: $hyoo_board_link[] = [ ... els ].map( el => {
+					const img = el.querySelector( 'img' )
+					return {
+						title: el.textContent!.trim() + ( img ? ' ' + img.src : '' ),
+						uri: el.getAttribute( 'href' )!,
+					}
+				 } )
 				
 				if( links.length ) return links
 			}
