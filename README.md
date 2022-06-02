@@ -1,4 +1,4 @@
-# $hyoo_board
+# [$hyoo_board](https://board.hyoo.ru/)
 
 Configurable starting page.
 
