@@ -4,4 +4,4 @@ Configurable starting page.
 
 ![](https://i.imgur.com/q6hGG02.png)
 
-Chrome extension to open it at new tab: [$hyoo_board_extension](./extension).
+[Chrome extension to open $hyoo_board at new tab](./extension).
