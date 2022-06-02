@@ -1,6 +1,7 @@
 [hyoo_board_group] {
 	border-radius: var(--mol_gap_round);
-	flex: 0 0 20rem;
+	flex: 1 0 auto;
+	max-width: 30rem;
 }
 
 [hyoo_board_group_head] {
@@ -37,10 +38,15 @@
 
 [hyoo_board_group_bookmark_image] {
 	align-self: center;
+	flex: 1 1 1.5rem;
+	object-fit: scale-down;
+	object-position: center right;
+	height: 1.5rem;
+	width: 1.5rem;
 }
 
 [hyoo_board_group_bookmark_title] {
-	flex: 1 0 auto;
+	flex: 0 0 auto;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
