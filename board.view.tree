@@ -1,6 +1,7 @@
 $hyoo_board $mol_drop
 	groups_all / \
 	Sub <= Page $mol_page
+		title \$hyoo_board
 		plugins /
 			<= Theme $mol_theme_auto
 		Head null
