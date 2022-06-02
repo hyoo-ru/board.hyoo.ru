@@ -1,7 +1,8 @@
 {
-  "name": "$hyoo_board_extension",
+  "name": "$hyoo_board",
   "version": "1.0",
   "manifest_version": 3,
+  "description": "Configurable starting page.",
   "icons": {
     "128": "board.png"
   },
