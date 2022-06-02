@@ -1,4 +1,3 @@
 deploy \/hyoo/board/logo/logo.svg
-deploy \/hyoo/board/extension/extension.crx
 
 include \/mol/offline/install
