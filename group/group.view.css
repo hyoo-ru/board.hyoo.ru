@@ -1,6 +1,6 @@
 [hyoo_board_group] {
 	border-radius: var(--mol_gap_round);
-	max-width: 30rem;
+	flex: 0 0 20rem;
 }
 
 [hyoo_board_group_head] {
