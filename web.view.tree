@@ -14,6 +14,12 @@ $mol_drop $mol_ghost
 $mol_theme_auto $mol_plugin
 	attr * mol_theme <= theme \
 
+$mol_paragraph $mol_view
+	line_height 24
+	letter_width 7
+	width_limit Infinity
+	sub / <= title
+
 $mol_svg $mol_view
 	dom_name \svg
 	dom_name_space \http://www.w3.org/2000/svg
@@ -169,6 +175,7 @@ $hyoo_board $mol_drop
 						link_adopt? <=> link_adopt? null
 						link_outer_receive? <=> group_add*? null
 		foot /
+			<= Hint $mol_paragraph title @ \Press Alt to rename
 			<= Source $mol_link_source uri \https://github.com/hyoo-ru/board.hyoo.ru
 			<= Lights $mol_lights_toggle
 
@@ -221,11 +228,7 @@ $mol_string $mol_view
 		<= Submit $mol_hotkey
 			key * enter?event <=> submit?event null
 
-$mol_paragraph $mol_view
-	line_height 24
-	letter_width 7
-	width_limit Infinity
-	sub / <= title
+$mol_icon_cross $mol_icon path \M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z
 
 $mol_image $mol_view
 	dom_name \img
@@ -261,39 +264,58 @@ $mol_drag $mol_ghost
 	allow_move true
 	image <= dom_node
 
+$mol_stack $mol_view
+
 $hyoo_board_group $mol_drop
 	links? /
 	adopt? <=> link_adopt? null
 	receive? <=> link_receive*Infinity? null
+	attr *
+		^
+		hyoo_board_group_edit <= edit? false
+	event *
+		^
+		pointermove?event <=> hover?event null
 	Sub $mol_list
 		rows /
 			<= Head_drop $mol_drop
 				adopt? <=> link_adopt? null
 				receive? <=> link_outer_receive? null
 				Sub <= Head $mol_view
-					sub /
+					sub <= head_content /
 						<= Title $mol_string
 							hint @ \Group title
 							value? <=> title? \
+						<= Delete $mol_button_minor
+							click? <=> delete? null
+							hint @ \Delete group
+							sub /
+								<= Delete_icon $mol_icon_cross
 			<= Widgets $mol_list
 				Empty <= Widgets_empty $mol_view
 					sub /
 						<= Widgets_empty_hint $mol_paragraph
-							title @ \Drop link here or...
-						<= Delete $mol_button_minor
-							click? <=> delete? null
-							title @ \Delete group
+							title @ \Drop link here
 				rows <= widgets /
 					<= Widget*id $mol_drop
 						adopt? <=> link_adopt? null
 						receive? <=> link_receive*? null
-						Sub <= Widget_drag* $mol_drag
-							end? <=> link_drag_end*? null
-							transfer *
-								text/plain <= widget_uri* \
-								text/html <= widget_html* \
-								text/uri-list <= widget_uri* \
-							Sub <= Widget_link* $mol_link_iconed
-								uri <= widget_uri* \
-								title <= widget_title* \
-								target \_top
+						Sub <= Bookmark* $mol_stack sub /
+							<= Bookmark_edit* $mol_string
+								value? <=> bookmark_text*? \
+								submit? <=> bookmark_edit_submit*? null
+							<= Widget_drag* $mol_drag
+								end? <=> widget_drag_end*? null
+								transfer *
+									text/plain <= bookmark_uri* \
+									text/html <= bookmark_html* \
+									text/uri-list <= bookmark_uri* \
+								Sub <= Bookmark_link* $mol_link_iconed
+									uri <= bookmark_uri* \
+									target \_top
+									content <= bookmark_content* /
+										<= Bookmark_title* $mol_view
+											sub / <= bookmark_title* \
+										<= Bookmark_image* $mol_image
+											title <= bookmark_text*
+											uri <= bookmark_image* \
