@@ -1,3 +1,5 @@
 {
-	"$hyoo_board_Hint_title": "Зажми Alt для изменения имён"
+	"$hyoo_board_Hint_dictionary_rename": "Держи Alt для изменения имён ",
+	"$hyoo_board_Hint_dictionary_group": "Кидай на имя группы для создания новой",
+	"$hyoo_board_Hint_dictionary_image": "Добавляй ссылку на картинку в конец имени"
 }

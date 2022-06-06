@@ -15,6 +15,9 @@ $hyoo_board $mol_drop
 						link_adopt? <=> link_adopt? null
 						link_outer_receive? <=> group_add*? null
 		foot /
-			<= Hint $mol_paragraph title @ \Hold Alt to rename
+			<= Hint $mol_hint dictionary *
+				rename @ \Hold Alt to rename
+				group @ \Drop to group name to make new
+				image @ \Add image url to the end of name
 			<= Source $mol_link_source uri \https://github.com/hyoo-ru/board.hyoo.ru
 			<= Lights $mol_lights_toggle
