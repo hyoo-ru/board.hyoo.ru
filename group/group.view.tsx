@@ -99,5 +99,9 @@ namespace $.$$ {
 			this.Bookmark_link( index ).focused( true )
 		}
 		
+		go() {
+			this.$.$mol_dom_context.parent.close()
+		}
+		
 	}
 }
