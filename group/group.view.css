@@ -36,6 +36,10 @@
 	padding: var(--mol_gap_text);
 }
 
+[hyoo_board_group_bookmark] {
+	justify-items: stretch;
+}
+
 [hyoo_board_group_bookmark_image] {
 	align-self: center;
 	flex: 1 1 1.5rem;
