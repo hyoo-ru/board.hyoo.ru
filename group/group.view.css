@@ -10,6 +10,7 @@
 
 [hyoo_board_group_title]:not(:placeholder-shown) {
 	background: none;
+	box-shadow: none;
 }
 
 [hyoo_board_group][mol_drop_status="drag"] [hyoo_board_group_widget]:last-child {
