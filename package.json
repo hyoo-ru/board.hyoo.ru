@@ -104,6 +104,7 @@
     "$mol_string",
     "$mol_hotkey",
     "$mol_keyboard",
+    "$mol_layer",
     "$mol_locale",
     "$mol_file",
     "$mol_charset_decode",
