@@ -6120,7 +6120,7 @@ var $;
             return "async";
         }
         cors() {
-            return "anonymous";
+            return null;
         }
     }
     $.$mol_image = $mol_image;
