@@ -7,12 +7,10 @@
 	align-content: stretch;
 	align-items: stretch;
 	flex-wrap: wrap;
-	padding: .375rem;
 }
 
 [hyoo_board_group] {
 	flex-grow: 1;
-	padding: .375rem;
 }
 
 [hyoo_board_page_foot] {
