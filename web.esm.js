@@ -4987,6 +4987,7 @@ var $;
                     shrink: 1,
                     basis: per(100),
                 },
+                padding: $mol_gap.block,
             },
             Foot: {
                 display: 'flex',
@@ -5002,6 +5003,10 @@ var $;
                 },
                 boxShadow: `0 -0.5rem 0.5rem -0.5rem hsla(0,0%,0%,.25)`,
                 zIndex: 1,
+                padding: $mol_gap.block,
+                ':empty': {
+                    display: 'none',
+                },
             },
         });
     })($$ = $.$$ || ($.$$ = {}));
@@ -5147,7 +5152,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_attach("hyoo/board/board.view.css", "[hyoo_board_view] {\n\tflex: 1 0 40rem;\n}\n\n[hyoo_board_groups] {\n\tflex-grow: 1;\n\talign-content: stretch;\n\talign-items: stretch;\n\tflex-wrap: wrap;\n\tpadding: .375rem;\n}\n\n[hyoo_board_group] {\n\tflex-grow: 1;\n\tpadding: .375rem;\n}\n\n[hyoo_board_page_foot] {\n\talign-self: flex-end;\n\tbackground: none;\n}\n\n[hyoo_board][mol_drop_status=\"drag\"] [hyoo_board_page_body] {\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_focus);\n}\n");
+    $mol_style_attach("hyoo/board/board.view.css", "[hyoo_board_view] {\n\tflex: 1 0 40rem;\n}\n\n[hyoo_board_groups] {\n\tflex-grow: 1;\n\talign-content: stretch;\n\talign-items: stretch;\n\tflex-wrap: wrap;\n}\n\n[hyoo_board_group] {\n\tflex-grow: 1;\n}\n\n[hyoo_board_page_foot] {\n\talign-self: flex-end;\n\tbackground: none;\n}\n\n[hyoo_board][mol_drop_status=\"drag\"] [hyoo_board_page_body] {\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_focus);\n}\n");
 })($ || ($ = {}));
 //hyoo/board/-css/board.view.css.ts
 ;
