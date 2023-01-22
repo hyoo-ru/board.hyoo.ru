@@ -652,6 +652,7 @@ declare namespace $ {
         };
         adopt(transfer?: any): {};
         receive(transfer?: any): any;
+        allow(): readonly any[];
         enter(event?: any): any;
         move(event?: any): any;
         leave(event?: any): any;
@@ -666,6 +667,7 @@ declare namespace $.$$ {
         protected _target: EventTarget | null;
         enter(event: DragEvent): void;
         move(event: DragEvent): void;
+        decide_action(event: DragEvent): any;
         leave(event: DragEvent): void;
         receive(transfer: unknown): unknown;
         drop(event: DragEvent): void;
