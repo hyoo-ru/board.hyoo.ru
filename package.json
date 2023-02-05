@@ -94,7 +94,6 @@
     "$mol_state_arg",
     "$mol_state",
     "$mol_action",
-    "$mol_media",
     "$mol_state_local",
     "$hyoo_board_group",
     "$mol_list",
