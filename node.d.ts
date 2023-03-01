@@ -793,9 +793,9 @@ declare namespace $ {
         static href_normal(): string;
         static dict(next?: {
             [key: string]: string | null;
-        }): {
+        }): Readonly<{
             [key: string]: string;
-        };
+        }>;
         static value(key: string, next?: string | null): string | null;
         static link(next: any): string;
         static make_link(next: {
@@ -1823,6 +1823,7 @@ declare namespace $ {
         length_max(): number;
         type(val?: any): string;
         event_change(event?: any): any;
+        submit_with_ctrl(): boolean;
         submit(event?: any): any;
         Submit(): $$.$mol_hotkey;
     }
