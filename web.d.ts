@@ -2109,7 +2109,7 @@ declare namespace $.$$ {
         bookmark_text(index: number, next?: string): any;
         bookmark_image(index: number): any;
         bookmark_title(index: number): any;
-        bookmark_content(index: number): $mol_view[];
+        bookmark_content(index: number): ($mol_view | $mol_image)[];
         bookmark_html(index: number): string;
         link_receive(index: number, next: $hyoo_board_link[]): void;
         widget_drag_end(index: number, event: DragEvent): void;
