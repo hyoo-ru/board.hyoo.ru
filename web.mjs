@@ -6921,6 +6921,5 @@ var $;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 //hyoo/board/group/group.view.tsx
-;
-export default $
-//# sourceMappingURL=web.mjs.map
+
+//# sourceMappingURL=web.js.map

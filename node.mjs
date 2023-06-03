@@ -7497,6 +7497,5 @@ var $;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 //hyoo/board/group/group.view.tsx
-;
-export default $
-//# sourceMappingURL=node.mjs.map
+
+//# sourceMappingURL=node.js.map
