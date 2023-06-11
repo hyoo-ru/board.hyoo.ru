@@ -5208,6 +5208,11 @@ var $;
 var $;
 (function ($) {
     class $hyoo_board extends $mol_drop {
+        allow() {
+            return [
+                "move"
+            ];
+        }
         groups_all() {
             return [
                 ""
@@ -6428,6 +6433,12 @@ var $;
 var $;
 (function ($) {
     class $hyoo_board_group extends $mol_drop {
+        allow() {
+            return [
+                "move",
+                "copy"
+            ];
+        }
         links(next) {
             if (next !== undefined)
                 return next;
@@ -6526,6 +6537,10 @@ var $;
         }
         Head_drop() {
             const obj = new this.$.$mol_drop();
+            obj.allow = () => [
+                "move",
+                "copy"
+            ];
             obj.adopt = (next) => this.link_adopt(next);
             obj.receive = (next) => this.link_outer_receive(next);
             obj.Sub = () => this.Head();
@@ -6628,6 +6643,10 @@ var $;
         }
         Widget(id) {
             const obj = new this.$.$mol_drop();
+            obj.allow = () => [
+                "move",
+                "copy"
+            ];
             obj.adopt = (next) => this.link_adopt(next);
             obj.receive = (next) => this.link_receive(id, next);
             obj.Sub = () => this.Bookmark(id);

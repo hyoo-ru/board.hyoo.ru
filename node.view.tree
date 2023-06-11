@@ -177,6 +177,7 @@ $mol_page $mol_view
 			sub <= foot /$mol_view
 
 $hyoo_board $mol_drop
+	allow / \move
 	groups_all / \
 	Sub <= Page $mol_page
 		title \$hyoo_board
@@ -309,6 +310,9 @@ $mol_drag $mol_ghost
 $mol_stack $mol_view
 
 $hyoo_board_group $mol_drop
+	allow /
+		\move
+		\copy
 	links? /
 	adopt? <=> link_adopt? null
 	receive? <=> link_receive*Infinity? null
@@ -321,6 +325,9 @@ $hyoo_board_group $mol_drop
 	Sub $mol_list
 		rows /
 			<= Head_drop $mol_drop
+				allow /
+					\move
+					\copy
 				adopt? <=> link_adopt? null
 				receive? <=> link_outer_receive? null
 				Sub <= Head $mol_view
@@ -340,6 +347,9 @@ $hyoo_board_group $mol_drop
 							title @ \Drop link here
 				rows <= widgets /
 					<= Widget*id $mol_drop
+						allow /
+							\move
+							\copy
 						adopt? <=> link_adopt? null
 						receive? <=> link_receive*? null
 						Sub <= Bookmark* $mol_stack sub /

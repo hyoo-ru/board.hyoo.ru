@@ -1569,6 +1569,7 @@ declare namespace $.$$ {
 
 declare namespace $ {
     class $hyoo_board extends $mol_drop {
+        allow(): readonly any[];
         groups_all(): readonly any[];
         Sub(): $mol_page;
         Theme(): $$.$mol_theme_auto;
@@ -1939,6 +1940,7 @@ declare namespace $ {
 
 declare namespace $ {
     class $hyoo_board_group extends $mol_drop {
+        allow(): readonly any[];
         links(next?: any): readonly any[];
         adopt(next?: any): any;
         receive(next?: any): any;
