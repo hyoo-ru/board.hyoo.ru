@@ -1,4 +1,5 @@
 $hyoo_board $mol_drop
+	allow / \move
 	groups_all / \
 	Sub <= Page $mol_page
 		title \$hyoo_board

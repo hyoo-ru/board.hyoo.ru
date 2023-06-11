@@ -1,4 +1,7 @@
 $hyoo_board_group $mol_drop
+	allow /
+		\move
+		\copy
 	links? /
 	adopt? <=> link_adopt? null
 	receive? <=> link_receive*Infinity? null
@@ -11,6 +14,9 @@ $hyoo_board_group $mol_drop
 	Sub $mol_list
 		rows /
 			<= Head_drop $mol_drop
+				allow /
+					\move
+					\copy
 				adopt? <=> link_adopt? null
 				receive? <=> link_outer_receive? null
 				Sub <= Head $mol_view
@@ -30,6 +36,9 @@ $hyoo_board_group $mol_drop
 							title @ \Drop link here
 				rows <= widgets /
 					<= Widget*id $mol_drop
+						allow /
+							\move
+							\copy
 						adopt? <=> link_adopt? null
 						receive? <=> link_receive*? null
 						Sub <= Bookmark* $mol_stack sub /
