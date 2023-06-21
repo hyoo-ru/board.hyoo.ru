@@ -3126,9 +3126,9 @@ var $;
                 return event;
             return null;
         }
-        status(val) {
-            if (val !== undefined)
-                return val;
+        status(next) {
+            if (next !== undefined)
+                return next;
             return "ready";
         }
     }
@@ -5382,16 +5382,16 @@ var $;
         hint() {
             return this.$.$mol_locale.text('$mol_lights_toggle_hint');
         }
-        checked(val) {
-            return this.lights(val);
+        checked(next) {
+            return this.lights(next);
         }
         Lights_icon() {
             const obj = new this.$.$mol_icon_brightness_6();
             return obj;
         }
-        lights(val) {
-            if (val !== undefined)
-                return val;
+        lights(next) {
+            if (next !== undefined)
+                return next;
             return false;
         }
     }
@@ -5424,14 +5424,14 @@ var $;
 var $;
 (function ($) {
     class $mol_scroll extends $mol_view {
-        scroll_top(val) {
-            if (val !== undefined)
-                return val;
+        scroll_top(next) {
+            if (next !== undefined)
+                return next;
             return 0;
         }
-        scroll_left(val) {
-            if (val !== undefined)
-                return val;
+        scroll_left(next) {
+            if (next !== undefined)
+                return next;
             return 0;
         }
         field() {
@@ -5690,8 +5690,8 @@ var $;
         body() {
             return [];
         }
-        body_scroll_top(val) {
-            return this.Body().scroll_top(val);
+        body_scroll_top(next) {
+            return this.Body().scroll_top(next);
         }
         Body() {
             const obj = new this.$.$mol_scroll();
@@ -6354,9 +6354,9 @@ var $;
         autocomplete() {
             return false;
         }
-        selection(val) {
-            if (val !== undefined)
-                return val;
+        selection(next) {
+            if (next !== undefined)
+                return next;
             return [
                 0,
                 0
@@ -6405,13 +6405,13 @@ var $;
         disabled() {
             return false;
         }
-        value(val) {
-            if (val !== undefined)
-                return val;
+        value(next) {
+            if (next !== undefined)
+                return next;
             return "";
         }
-        value_changed(val) {
-            return this.value(val);
+        value_changed(next) {
+            return this.value(next);
         }
         hint() {
             return "";
@@ -6440,9 +6440,9 @@ var $;
         length_max() {
             return +Infinity;
         }
-        type(val) {
-            if (val !== undefined)
-                return val;
+        type(next) {
+            if (next !== undefined)
+                return next;
             return "text";
         }
         event_change(event) {
@@ -6919,9 +6919,9 @@ var $;
         drag_end(event) {
             return this.end(event);
         }
-        status(val) {
-            if (val !== undefined)
-                return val;
+        status(next) {
+            if (next !== undefined)
+                return next;
             return "ready";
         }
     }
@@ -9418,15 +9418,15 @@ var $;
 var $;
 (function ($) {
     class $mol_view_tree_test_binding extends $mol_view {
-        value(val) {
-            return this.task_title_new(val);
+        value(next) {
+            return this.task_title_new(next);
         }
         enabled() {
             return this.head_complete_enabled();
         }
-        task_title_new(val) {
-            if (val !== undefined)
-                return val;
+        task_title_new(next) {
+            if (next !== undefined)
+                return next;
             return "123";
         }
         head_complete_enabled() {
@@ -9507,9 +9507,9 @@ var $;
     ], $mol_view_tree_test_binding_right.prototype, "Test", null);
     $.$mol_view_tree_test_binding_right = $mol_view_tree_test_binding_right;
     class $mol_view_tree_test_binding_right_test extends $mol_view {
-        width(val) {
-            if (val !== undefined)
-                return val;
+        width(next) {
+            if (next !== undefined)
+                return next;
             return 0;
         }
     }

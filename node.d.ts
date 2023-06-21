@@ -965,7 +965,7 @@ declare namespace $ {
         move(event?: any): any;
         leave(event?: any): any;
         drop(event?: any): any;
-        status(val?: any): string;
+        status(next?: any): string;
     }
 }
 
@@ -1618,9 +1618,9 @@ declare namespace $ {
     class $mol_lights_toggle extends $mol_check_icon {
         Icon(): $mol_icon_brightness_6;
         hint(): string;
-        checked(val?: any): boolean;
+        checked(next?: any): boolean;
         Lights_icon(): $mol_icon_brightness_6;
-        lights(val?: any): boolean;
+        lights(next?: any): boolean;
     }
 }
 
@@ -1632,8 +1632,8 @@ declare namespace $.$$ {
 
 declare namespace $ {
     class $mol_scroll extends $mol_view {
-        scroll_top(val?: any): number;
-        scroll_left(val?: any): number;
+        scroll_top(next?: any): number;
+        scroll_left(next?: any): number;
         field(): Record<string, any>;
         event(): Record<string, any>;
         tabindex(): number;
@@ -1691,7 +1691,7 @@ declare namespace $ {
         head(): readonly any[];
         Head(): $mol_view;
         body(): readonly $mol_view_content[];
-        body_scroll_top(val?: any): number;
+        body_scroll_top(next?: any): number;
         Body(): $$.$mol_scroll;
         foot(): readonly $mol_view[];
         Foot(): $mol_view;
@@ -1909,7 +1909,7 @@ declare namespace $ {
         enabled(): boolean;
         minimal_height(): number;
         autocomplete(): boolean;
-        selection(val?: any): readonly number[];
+        selection(next?: any): readonly number[];
         auto(): readonly any[];
         field(): Record<string, any>;
         attr(): Record<string, any>;
@@ -1917,8 +1917,8 @@ declare namespace $ {
         plugins(): readonly any[];
         selection_watcher(): any;
         disabled(): boolean;
-        value(val?: any): string;
-        value_changed(val?: any): string;
+        value(next?: any): string;
+        value_changed(next?: any): string;
         hint(): string;
         hint_visible(): string;
         spellcheck(): boolean;
@@ -1928,7 +1928,7 @@ declare namespace $ {
         keyboard(): string;
         enter(): string;
         length_max(): number;
-        type(val?: any): string;
+        type(next?: any): string;
         event_change(event?: any): any;
         submit_with_ctrl(): boolean;
         submit(event?: any): any;
@@ -2048,7 +2048,7 @@ declare namespace $ {
         drag_move(event?: any): any;
         end(event?: any): any;
         drag_end(event?: any): any;
-        status(val?: any): string;
+        status(next?: any): string;
     }
 }
 
