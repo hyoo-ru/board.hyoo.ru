@@ -53,7 +53,8 @@ $hyoo_board_group $mol_drop
 									text/uri-list <= bookmark_uri* \
 								Sub <= Bookmark_link* $mol_link_iconed
 									uri <= bookmark_uri* \
-									click? <=> go? null
+									- click? <=> go? null
+									target \_self
 									content <= bookmark_content* /
 										<= Bookmark_title* $mol_view
 											sub / <= bookmark_title* \
