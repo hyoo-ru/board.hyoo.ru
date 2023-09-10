@@ -54,7 +54,7 @@ $hyoo_board_group $mol_drop
 								Sub <= Bookmark_link* $mol_link_iconed
 									uri <= bookmark_uri* \
 									- click? <=> go? null
-									target \_self
+									target \_top
 									content <= bookmark_content* /
 										<= Bookmark_title* $mol_view
 											sub / <= bookmark_title* \
