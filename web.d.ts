@@ -1952,7 +1952,6 @@ declare namespace $ {
         widget_drag_end(id: any, next?: any): any;
         bookmark_uri(id: any): string;
         bookmark_html(id: any): string;
-        go(next?: any): any;
         bookmark_title(id: any): string;
         Bookmark_title(id: any): $mol_view;
         bookmark_image(id: any): string;

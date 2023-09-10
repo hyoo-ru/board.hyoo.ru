@@ -7179,11 +7179,6 @@ var $;
         bookmark_html(id) {
             return "";
         }
-        go(next) {
-            if (next !== undefined)
-                return next;
-            return null;
-        }
         bookmark_title(id) {
             return "";
         }
@@ -7212,7 +7207,7 @@ var $;
         Bookmark_link(id) {
             const obj = new this.$.$mol_link_iconed();
             obj.uri = () => this.bookmark_uri(id);
-            obj.click = (next) => this.go(next);
+            obj.target = () => "_self";
             obj.content = () => this.bookmark_content(id);
             return obj;
         }
@@ -7318,9 +7313,6 @@ var $;
     __decorate([
         $mol_mem_key
     ], $hyoo_board_group.prototype, "widget_drag_end", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_board_group.prototype, "go", null);
     __decorate([
         $mol_mem_key
     ], $hyoo_board_group.prototype, "Bookmark_title", null);
