@@ -6630,7 +6630,7 @@ var $;
         Bookmark_link(id) {
             const obj = new this.$.$mol_link_iconed();
             obj.uri = () => this.bookmark_uri(id);
-            obj.target = () => "_self";
+            obj.target = () => "_top";
             obj.content = () => this.bookmark_content(id);
             return obj;
         }
