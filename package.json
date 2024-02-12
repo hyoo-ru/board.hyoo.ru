@@ -125,6 +125,7 @@
     "$mol_support",
     "$mol_print",
     "$mol_dom_listener",
+    "$mol_type_enforce",
     "$mol_string",
     "$mol_hotkey",
     "$mol_keyboard_code",
