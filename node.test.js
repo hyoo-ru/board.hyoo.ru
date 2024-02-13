@@ -5641,9 +5641,9 @@ var $;
 		Hint(){
 			const obj = new this.$.$mol_hint();
 			(obj.dictionary) = () => ({
-				"rename": (this.$.$mol_locale.text("$hyoo_board_Hint_rename")), 
-				"group": (this.$.$mol_locale.text("$hyoo_board_Hint_group")), 
-				"image": (this.$.$mol_locale.text("$hyoo_board_Hint_image"))
+				"rename": (this.$.$mol_locale.text("$hyoo_board_Hint_dictionary_rename")), 
+				"group": (this.$.$mol_locale.text("$hyoo_board_Hint_dictionary_group")), 
+				"image": (this.$.$mol_locale.text("$hyoo_board_Hint_dictionary_image"))
 			});
 			return obj;
 		}
@@ -6723,7 +6723,7 @@ var $;
 		}
 		Title(){
 			const obj = new this.$.$mol_string();
-			(obj.hint) = () => (this.$.$mol_locale.text("$hyoo_board_group_Title_hint"));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$hyoo_board_group_Title_hint")));
 			(obj.value) = (next) => ((this.title(next)));
 			return obj;
 		}
@@ -6738,7 +6738,7 @@ var $;
 		Delete(){
 			const obj = new this.$.$mol_button_minor();
 			(obj.click) = (next) => ((this.delete(next)));
-			(obj.hint) = () => (this.$.$mol_locale.text("$hyoo_board_group_Delete_hint"));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$hyoo_board_group_Delete_hint")));
 			(obj.sub) = () => ([(this.Delete_icon())]);
 			return obj;
 		}
@@ -6760,7 +6760,7 @@ var $;
 		}
 		Widgets_empty_hint(){
 			const obj = new this.$.$mol_paragraph();
-			(obj.title) = () => (this.$.$mol_locale.text("$hyoo_board_group_Widgets_empty_hint_title"));
+			(obj.title) = () => ((this.$.$mol_locale.text("$hyoo_board_group_Widgets_empty_hint_title")));
 			return obj;
 		}
 		Widgets_empty(){
