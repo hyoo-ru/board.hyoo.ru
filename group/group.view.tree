@@ -28,7 +28,7 @@ $hyoo_board_group $mol_drop
 							click? <=> delete? null
 							hint @ \Delete group
 							sub /
-								<= Delete_icon $mol_icon_cross
+								<= Delete_icon $mol_icon_close
 			<= Widgets $mol_list
 				Empty <= Widgets_empty $mol_view
 					sub /
